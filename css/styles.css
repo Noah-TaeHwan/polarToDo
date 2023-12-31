@@ -1,0 +1,95 @@
+@import url(/css/reset.css);
+
+body,
+footer {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #333d79;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  margin: 32px;
+}
+
+.top-bar svg {
+  margin-right: 16px;
+  fill: #faebef;
+}
+
+.top-bar span {
+  border: 1px solid #faebef;
+  padding: 4px;
+  color: #faebef;
+}
+
+.quote {
+  font-size: 32px;
+  font-weight: 700;
+  color: #faebef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px;
+}
+
+.column {
+  margin: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #faebef;
+}
+
+.column__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 320px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.column__info--contact {
+  font-size: 16px;
+}
+
+.column__todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 320px;
+  width: 320px;
+}
+
+.login-form {
+  margin-bottom: 16px;
+}
+
+.column__todo button {
+  margin-bottom: 80px;
+}
+
+footer {
+  margin: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__icon svg {
+  margin: 8px;
+  fill: #faebef;
+}
+
+.footer__icon a {
+  text-decoration: none;
+  color: #faebef;
+}
