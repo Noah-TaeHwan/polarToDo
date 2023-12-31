@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polar ToDo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="top-bar"></section>
+    <main>
+      <div class="quote"></div>
+      <div class="column">
+        <div class="column__info">
+          <div class="column__info--days">Monday</div>
+          <div class="column__info--date">01/21/2024</div>
+          <div class="column__info--time">11:11:11</div>
+          <div class="column__info--contact">
+            <span>Email: noah.taehwan@gmail.com</span>
+          </div>
+        </div>
+        <div class="column__todo">
+          <input
+            type="text"
+            required
+            minlength="4"
+            maxlength="20"
+            placeholder="Feel free to let us know your name"
+          />
+          <button>Log In</button>
+          <input type="text" placeholder="Write a To-Do and Press Enter" />
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
