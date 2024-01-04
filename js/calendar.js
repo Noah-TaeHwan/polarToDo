@@ -1,9 +1,6 @@
 const calendarDays = document.querySelector('.column__info--days');
 const calendarDate = document.querySelector('.column__info--date');
 
-console.log(calendarDays);
-console.log(calendarDate);
-
 function getDays() {
   const date = new Date();
   const daysOfWeek = [
