@@ -7,10 +7,23 @@ footer {
   background-color: #333d79;
 }
 
+h1 {
+  color: #faebef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
 .top-bar {
   display: flex;
   align-items: center;
-  margin: 32px;
+  margin: 72px;
 }
 
 .top-bar svg {
@@ -35,9 +48,9 @@ footer {
 }
 
 .column {
-  margin: 160px;
+  margin: 80px 160px 80px 160px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   color: #faebef;
 }
@@ -51,16 +64,59 @@ footer {
   font-weight: 600;
 }
 
+.column__info--days {
+  font-size: 48px;
+}
+
+.column__info--time {
+  font-size: 20px;
+}
+
 .column__info--contact {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 100;
 }
 
 .column__todo {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   height: 320px;
   width: 320px;
+}
+
+.column__todo input {
+  height: 40px;
+  width: 400px;
+  margin-bottom: 28px;
+  border-radius: 8px;
+  background-color: #faebef;
+  color: #333d79;
+  border: 1px solid #faebef;
+  padding-left: 16px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.column__todo button {
+  height: 44px;
+  width: 422px;
+  margin-bottom: 28px;
+  border-radius: 8px;
+  background-color: #faebef;
+  color: #333d79;
+  border: 1px solid #faebef;
+  padding-left: 16px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.column__todo::placeholder {
+  color: red;
+}
+.column__todo span {
+  margin-bottom: 16px;
 }
 
 .login-form {
@@ -68,11 +124,10 @@ footer {
 }
 
 .column__todo button {
-  margin-bottom: 80px;
+  margin-bottom: 48px;
 }
 
 footer {
-  margin: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,4 +147,6 @@ footer {
 .footer__icon a {
   text-decoration: none;
   color: #faebef;
+  font-weight: 100;
+  font-size: 20px;
 }

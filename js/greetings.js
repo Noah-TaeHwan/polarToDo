@@ -1,0 +1,35 @@
+const loginForm = document.querySelector('.column__todo');
+const loginForm2 = document.querySelector('.login-form');
+const loginBtn = document.querySelector('.login-btn');
+const loginInput = document.querySelector('.column__todo input');
+const greeting = document.querySelector('#greeting');
+const todos = document.querySelector('.todos');
+
+const HIDDEN_CLASSNAME = 'hidden';
+const USERNAME_KEY = 'username';
+
+function loginClick(event) {
+  event.preventDefault();
+  const username = loginInput.value;
+  localStorage.setItem(USERNAME_KEY, username);
+  loginForm2.classList.add(HIDDEN_CLASSNAME);
+  loginBtn.classList.add(HIDDEN_CLASSNAME);
+  paintGreetings(username);
+}
+
+function paintGreetings(username) {
+  greeting.innerText = `Hello, ${username}! ✋`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+loginForm.addEventListener('submit', loginClick);
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+  loginForm2.classList.remove(HIDDEN_CLASSNAME);
+} else {
+  paintGreetings(savedUsername);
+  loginForm2.classList.add(HIDDEN_CLASSNAME);
+  loginBtn.classList.add(HIDDEN_CLASSNAME);
+}
