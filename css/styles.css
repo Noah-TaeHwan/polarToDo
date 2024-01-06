@@ -24,7 +24,7 @@ h1 {
 .top-bar {
   display: flex;
   align-items: center;
-  margin: 72px;
+  margin: 40px;
 }
 
 .top-bar svg {
@@ -46,7 +46,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 80px;
+  margin: 40px;
   position: relative;
 }
 
@@ -55,11 +55,14 @@ h1 {
 }
 
 .column {
-  margin: 80px 160px 80px 160px;
+  margin: 80px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   color: #faebef;
+}
+
+.fix {
 }
 
 .column__info {
@@ -84,16 +87,18 @@ h1 {
   font-weight: 100;
 }
 
-.column__todo {
+.column__logIn,
+.column__toDos {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 320px;
+
   width: 320px;
 }
 
-.column__todo input {
+.column__logIn input,
+.column__toDos input {
   height: 40px;
   width: 400px;
   margin-bottom: 28px;
@@ -106,7 +111,8 @@ h1 {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.column__todo button {
+.column__logIn button,
+.column__toDos button {
   height: 44px;
   width: 422px;
   margin-bottom: 28px;
@@ -119,10 +125,12 @@ h1 {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.column__todo::placeholder {
+.column__logIn::placeholder,
+.column__toDos::placeholder {
   color: red;
 }
-.column__todo span {
+.column__logIn span,
+.column__toDos span {
   margin-bottom: 16px;
 }
 
@@ -130,7 +138,8 @@ h1 {
   margin-bottom: 16px;
 }
 
-.column__todo button {
+.column__logIn button,
+.column__toDos button {
   margin-bottom: 48px;
 }
 

@@ -1,7 +1,7 @@
-const loginForm = document.querySelector('.column__todo');
+const loginForm = document.querySelector('.column__logIn');
 const loginForm2 = document.querySelector('.login-form');
 const loginBtn = document.querySelector('.login-btn');
-const loginInput = document.querySelector('.column__todo input');
+const loginInput = document.querySelector('.column__logIn input');
 const greeting = document.querySelector('#greeting');
 const todos = document.querySelector('.todos');
 

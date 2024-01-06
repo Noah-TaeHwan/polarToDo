@@ -47,24 +47,29 @@
             <span>Email: noah.taehwan@gmail.com</span>
           </div>
         </div>
+        <div class="fix">
+          <form class="column__logIn">
+            <input
+              class="login-form"
+              type="text"
+              required
+              minlength="2"
+              maxlength="30"
+              placeholder="Feel free to let us know your name"
+            />
+            <button class="login-btn">Enter</button>
+          </form>
 
-        <form class="column__todo">
-          <input
-            class="login-form"
-            type="text"
-            required
-            minlength="2"
-            maxlength="30"
-            placeholder="Feel free to let us know your name"
-          />
-          <button class="login-btn">Enter</button>
-          <span>You don't need an extensive to-do list.</span>
-          <input
-            class="todos"
-            type="text"
-            placeholder="Focus on just three key priorities."
-          />
-        </form>
+          <form class="column__toDos">
+            <span>You don't need an extensive to-do list.</span>
+            <input
+              class="todos"
+              type="text"
+              placeholder="Focus on just three key priorities."
+            />
+            <ul class="column__todo-list"></ul>
+          </form>
+        </div>
       </div>
     </main>
     <footer>
@@ -89,5 +94,6 @@
     <script src="js/calendar.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
   </body>
 </html>
