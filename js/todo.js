@@ -3,6 +3,7 @@ const toDoInput = document.querySelector('#todo-form input');
 const toDoList = document.querySelector('#todo-list');
 
 const TODOS_KEY = 'todos';
+const MAX_TODOS = 3;
 
 let ToDos = [];
 
@@ -15,6 +16,7 @@ function deleteToDo(event) {
   li.remove();
   ToDos = ToDos.filter((ToDo) => ToDo.id !== parseInt(li.id));
   saveToDos();
+  checkToDoLimit();
 }
 
 function paintToDo(newTodo) {
@@ -28,10 +30,14 @@ function paintToDo(newTodo) {
   li.appendChild(button);
   li.appendChild(span);
   toDoList.appendChild(li);
+  checkToDoLimit();
 }
 
 function handleToDoSubmit(event) {
   event.preventDefault();
+  if (ToDos.length >= MAX_TODOS) {
+    return;
+  }
   const newTodo = toDoInput.value;
   toDoInput.value = '';
   const newTodoObj = {
@@ -43,12 +49,21 @@ function handleToDoSubmit(event) {
   saveToDos();
 }
 
+function checkToDoLimit() {
+  if (ToDos.length >= MAX_TODOS) {
+    toDoForm.style.display = 'none';
+  } else {
+    toDoForm.style.display = 'block';
+  }
+}
+
 toDoForm.addEventListener('submit', handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
-
 if (savedToDos) {
   const parsedToDos = JSON.parse(savedToDos);
   ToDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
 }
+
+checkToDoLimit();
